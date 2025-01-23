@@ -15,7 +15,7 @@ function FinancialRecordForm () {
     event.preventDefault();
 
     const newRecord = {
-      userId: user?.id ?? "",
+      userId: user ? user.id : "",
       date: new Date(),
       description: description,
       amount: parseFloat(amount),

@@ -1,8 +1,12 @@
-
+import {useUser} from "@clerk/clerk-react"
 
 function Dashboard() {
+
+    const {user} = useUser()
     return (
-        <h1>Dashboard</h1>
+        <div className="dashboard-container">
+            <h1>Welcome {user ? user.firstName : ""}! Here Are Your Finances</h1>
+        </div>
     )
 }
 
